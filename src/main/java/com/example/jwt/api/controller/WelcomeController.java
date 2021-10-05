@@ -21,11 +21,6 @@ public class WelcomeController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    @GetMapping("/")
-    public String welcome(){
-        return "Welcome to Mint";
-    }
-
     @PostMapping("/auth")
     public String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
         try {
